@@ -7,3 +7,22 @@ O(n log n) Log lineal
 O(n**2) Polinomial
 O(2**n) Exponencial
 
+
+-Crear entorno virtual
+python3 -m venv env
+
+
+-activar entorno virtual
+source venv/Scripts/activate
+
+-instalar librerias
+
+pip install bokeh
+
+-para ver que tiene instalado
+
+pip freeze
+
+-salir del entorno virtual 
+
+deactivate
