@@ -32,10 +32,10 @@ class Estudiante(Persona):
 def main():
     estudiante=Estudiante("Leonardo",29,"ingeniero")
     doctor=Doctor("Carlos",54,"Cardiologo")
-    print(doctor.info1())
-    print(doctor.info())
-    print(estudiante.info1())
-    print(estudiante.info())
+    doctor.info1()
+    doctor.info()
+    estudiante.info1()
+    estudiante.info()
 
 
 if __name__=="__main__":
