@@ -26,3 +26,34 @@ pip freeze
 -salir del entorno virtual 
 
 deactivate
+
+-ver errores de tipos de datos
+
+mypy Palindrome_using_static_typing.py --check-untyped-defs
+
+
+
+SETS----------------------------
+add
+Adds a specified element to the set.
+update
+Adds specified elements to the set.
+Deleting
+discard
+Removes an element from the set.
+remove
+Removes an element from the set (raises KeyError if not found).
+pop
+Removes and returns an arbitrary element from the set.
+clear
+Removes all elements from the set.
+
+Set Operations
+- (difference)
+Returns a new set with elements in the set that are not in the other set.
+& (intersection)
+Returns a new set with elements common to the set and the other set.
+^ (symmetric_difference)
+Returns a new set with elements in either the set or the other set but not both.
+| (union)
+Returns a new set with elements from the set and the other set.
