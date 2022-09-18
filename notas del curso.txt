@@ -57,3 +57,12 @@ Returns a new set with elements common to the set and the other set.
 Returns a new set with elements in either the set or the other set but not both.
 | (union)
 Returns a new set with elements from the set and the other set.
+
+formatos de hora
+import datetime
+%Y =año
+%m mes
+%d dia
+%H hora
+%M mes
+%S segundos

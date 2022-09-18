@@ -20,3 +20,4 @@ print(my_set3)
 #se quedan todos los elementos de los dos sets menos los que se repiten
 my_set3=my_set2^my_set
 print(f"La diferencia simetrica es: {my_set3}")
+
