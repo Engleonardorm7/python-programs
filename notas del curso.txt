@@ -66,3 +66,10 @@ import datetime
 %H hora
 %M mes
 %S segundos
+
+
+______________Scrapping
+
+instalar paquetes para hacer scrapping
+
+pip install requests lxml autopep8
