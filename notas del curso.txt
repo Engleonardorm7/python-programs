@@ -73,3 +73,45 @@ ______________Scrapping
 instalar paquetes para hacer scrapping
 
 pip install requests lxml autopep8
+
+___________Scrapy
+
+instalar scrapy y autopep8
+
+pip install scrapy autopep8
+
+-para comprovar si quedó bien instalado
+scrapy version 
+
+
+- iniciar proyecto
+
+ scrapy startproject tutorial       tutorial es el nombre
+
+-ejecutar scripts con scrapy (ejecuta el programa)
+
+ scrapy crawl quotes          - quotes es el nombre del spider (clase) (ejecuta el proyecto)
+
+-para tomar de referencia la pagina en la que se va a trabajar (abrir entorno)
+
+scrapy shell 'http://quotes.toscrape.com/'
+
+-trae lo que esta en esa posicion de la etiqueta
+
+response.xpath('//h1/a/text()').get()
+
+- getall() sirve para traer listas
+
+response.xpath('//span[@class="text" and @itemprop="text"]/text()').getall()
+
+/OneDrive/Desktop/Platzi/Python/CursoPython_inter/python-programs/Scrapy_Course/tutorial
+
+
+
+
+
+response.xpath('//a[@class="mobile-header-title expandable"]/div/text()').getall()
+response.xpath('//div[contains(@class, "tags-box")]//span[@class="tag-item"]/a/text()').getall()
+
+- guarda los datos solicitados (-o salida) en un archivo "nombre".json
+scrapy crawl quotes -o quotes.json
