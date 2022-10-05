@@ -104,9 +104,6 @@ response.xpath('//h1/a/text()').get()
 
 response.xpath('//span[@class="text" and @itemprop="text"]/text()').getall()
 
-/OneDrive/Desktop/Platzi/Python/CursoPython_inter/python-programs/Scrapy_Course/tutorial
-
-
 
 
 
@@ -115,3 +112,24 @@ response.xpath('//div[contains(@class, "tags-box")]//span[@class="tag-item"]/a/t
 
 - guarda los datos solicitados (-o salida) en un archivo "nombre".json
 scrapy crawl quotes -o quotes.json
+
+
+/OneDrive/Desktop/Platzi/Python/CursoPython_inter/python-programs/Scrapy_Course/tutorial
+
+- Proyecto scraper Quotes
+/OneDrive/Desktop/Platzi/Python/CursoPython_inter/python-programs/Scrapy_Course/quotes_scraper/quotes_scraper 
+
+
+
+- para mostrar unicamente el top 5 de tags
+scrapy crawl quotes -a top=5
+
+
+- CONFIGURACIONES:
+
+'CONTURRENT_REQUESTS': 24 #permite realizar (24) peticiones a la vez
+'MEMUSAGE_LIMIT_MB': 2048, # Cantidad de memoria Ram que se le permite a scrapy utilizar
+'MEMUSAGE_NOTIFY_MAIL':['leonardorm7@hotmail.com'] #si se supera la cantidad de memoria ram usada, se enviará una alerta al correo
+'ROBORSTXT_OBEY': True, #obedece las reglas del archivo robots.txt
+'USER_AGENT': 'Leonardo Rodriguez' # en el servidor, aparecerá que esta persona hizo la peticion.
+'FEED_EXPORT_ENCODING': 'utf-8' # para que no se obtengan caracteres raros en nuestro archivo Json
