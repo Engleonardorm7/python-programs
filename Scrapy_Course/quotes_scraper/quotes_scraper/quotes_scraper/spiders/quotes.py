@@ -38,8 +38,7 @@ class QuotesSpider(scrapy.Spider):
             yield response.follow(next_page_button_link,callback=self.parse_only_quotes, cb_kwargs={'quotes':quotes,'author':author})
         else:
             yield {
-                'quotes':quotes,
-                'author':author
+                'quotes': list(zip(quotes, author))
             }
 
     def parse(self,response):#analizar un archivo para extraer informacion valiosa
