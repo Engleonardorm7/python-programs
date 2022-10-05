@@ -1,0 +1,5 @@
+notas_p = $x('//div[@class="viewport_1 slick-viewport"]//div[@class="Grid__GradeCell__Content"]/span[@class="Grade"]/text()').map(x=>x.wholeText)
+nombres = $x('//div[@class="viewport_0 slick-viewport"]//a[@class="student-grades-link student_context_card_trigger"]/text()').map(x=>x.wholeText)
+
+notas=//div[@class="viewport_1 slick-viewport"]//div[@class="Grid__GradeCell__Content"]/span[@class="Grade"]/text()
+estudiantes=//div[@class="viewport_0 slick-viewport"]//a[@class="student-grades-link student_context_card_trigger"]/text()
