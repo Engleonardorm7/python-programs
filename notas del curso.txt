@@ -76,11 +76,12 @@ pip install requests lxml autopep8
 
 ___________Scrapy
 
-instalar scrapy y autopep8
+- instalar scrapy y autopep8
 
 pip install scrapy autopep8
 
 -para comprovar si quedó bien instalado
+
 scrapy version 
 
 
@@ -124,6 +125,8 @@ scrapy crawl quotes -o quotes.json
 - para mostrar unicamente el top 5 de tags
 scrapy crawl quotes -a top=5
 
+
+-shift+alt+f para organizar todo el texto
 
 - CONFIGURACIONES:
 
