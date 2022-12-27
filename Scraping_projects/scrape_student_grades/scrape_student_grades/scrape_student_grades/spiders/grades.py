@@ -6,17 +6,15 @@ class QuotesSpider(scrapy.Spider):
         'https://virtualmbs.instructure.com/courses/1348/gradebook'
     }
 
-    custom_settings={
-        'FEED_URI': 'quotes.json',
-        'FEED_FORMAT': 'json',
-        #configuraciones adicionales para mejorar
-        'CONTURRENT_REQUESTS': 24,
-        'MEMUSAGE_LIMIT_MB': 2048,
-        'MEMUSAGE_NOTIFY_MAIL':['leonardorm7@hotmail.com'],
-        'ROBORSTXT_OBEY': False,
-        'USER_AGENT': 'Leonardo Rodriguez',
-        'FEED_EXPORT_ENCODING': 'utf-8'
-
+    custom_settings = {
+        'FEEDS': {
+            'grades.json': {
+                'format': 'json',
+                'encoding': 'utf-8',
+                'indent': 4,
+            }
+        },
+        'ROBORSTXT_OBEY': True,
     }
 
 def parse(self,response):

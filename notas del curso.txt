@@ -9,11 +9,17 @@ O(2**n) Exponencial
 
 
 -Crear entorno virtual
-python3 -m venv env
+
+python3 -m venv venv
 
 
 -activar entorno virtual
 source venv/Scripts/activate
+
+- Actualizar el manejador de paquetes pip
+
+python -m pip install pip --upgrade
+
 
 -instalar librerias
 
@@ -74,7 +80,7 @@ instalar paquetes para hacer scrapping
 
 pip install requests lxml autopep8
 
-___________Scrapy
+___________Scrapy ----------------------
 
 - instalar scrapy y autopep8
 
@@ -88,6 +94,8 @@ scrapy version
 - iniciar proyecto
 
  scrapy startproject tutorial       tutorial es el nombre
+
+- nos movemos dentro de la carpeta de proyecto (tutorial)
 
 -ejecutar scripts con scrapy (ejecuta el programa)
 
@@ -133,6 +141,33 @@ scrapy crawl quotes -a top=5
 'CONTURRENT_REQUESTS': 24 #permite realizar (24) peticiones a la vez
 'MEMUSAGE_LIMIT_MB': 2048, # Cantidad de memoria Ram que se le permite a scrapy utilizar
 'MEMUSAGE_NOTIFY_MAIL':['leonardorm7@hotmail.com'] #si se supera la cantidad de memoria ram usada, se enviará una alerta al correo
-'ROBORSTXT_OBEY': True, #obedece las reglas del archivo robots.txt
+'ROBOTSTXT_OBEY': True, #obedece las reglas del archivo robots.txt
 'USER_AGENT': 'Leonardo Rodriguez' # en el servidor, aparecerá que esta persona hizo la peticion.
 'FEED_EXPORT_ENCODING': 'utf-8' # para que no se obtengan caracteres raros en nuestro archivo Json
+
+
+
+
+response.xpath('//a[starts-with(@href,"collection") and (parent::h3|parent::h2)]/@href').getall()
+
+grades
+response.xpath('//div[@id="main"]//div[@class="viewport_1 slick-viewport"]//span[@class="Grade"]/text()').get()
+response.xpath('//div[@class="viewport_0 slick-viewport"]//a[@class="student-grades-link student_context_card_trigger"]/text()').getall()
+response.xpath('//div[@class="assignment-gradebook-container"]//span[@class="fCrpb_bGBk fCrpb_egrg"]/text()').getall()
+visualizar en xhtml
+x('//div[@class="viewport_0 slick-viewport"]//a[@class="student-grades-link student_context_card_trigger"]/text()').map(x=>x.wholeText)
+
+
+- registrar la url del repositorio en el folder
+git remote add origin git@github.com:Engleonardorm7/Intellig
+
+-Añadir todos los archivos
+git add -A
+
+-permitir unir los documentos que estan en la carpeta de Github con la carpeta de nuestro documento
+git pull origin main --allow-unrelated-histories
+
+Un nodo div con una clase que contiene “tags-box” en su contenido se selecciona mediante la siguiente expresión de XPath:
+
+//div[contains(@class, "tags-box")]
+
