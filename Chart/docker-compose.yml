@@ -1,0 +1,11 @@
+#este archivo declara como y desde donde se inicia el contenedor
+
+services:
+  app-csv: #nombre del servicio
+    build:
+      context: . #ubicacion de donde se ejecuta
+      dockerfile: Dockerfile
+    volumes:
+#para correr el programa de forma continua y ver los cambios en tiempo real
+      - .:/app
+      #todos los archivos en este proyecto se van a enlazar con /app

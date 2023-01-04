@@ -1,0 +1,16 @@
+para crear el contenedor
+docker-compose build
+
+para lanzar el contenedor
+docker-compose up -d
+
+
+para bajar el contenedor
+docker-compose down
+
+para ver el estado del contenedor
+docker-compose ps
+
+para ejecutar el programa en un entorno tipo bash
+docker-compose exec app-csv bash
+app-csv es el nombre del programa
