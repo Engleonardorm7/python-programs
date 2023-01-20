@@ -10,10 +10,13 @@ Delete
 
 >commands:
 
->ventas clients create
->ventas clients delete ID
->ventas clients list
->ventas clients update ID
+To create a New client: ventas clients create
+
+To delete a client: ventas clients delete ID
+
+To list the clients: ventas clients list
+
+To update a client: ventas clients update ID
 
 
 
