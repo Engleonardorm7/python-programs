@@ -1,0 +1,13 @@
+Se crea el entorno virtual
+
+ python -m venv venv
+
+se activa
+
+source venv/Scripts/activate
+
+se instala el programa que esta en . esta ubicacion
+
+pip install --editable .
+
+con ventas clients --help podemos ver los comandos que podemos usar
